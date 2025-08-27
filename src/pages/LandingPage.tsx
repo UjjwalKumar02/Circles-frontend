@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
 import { useEffect } from "react";
+import { FcGoogle } from "react-icons/fc";
+
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -27,22 +29,26 @@ const LandingPage = () => {
         console.error("Failed to fetch user:", err);
       }
     };
-
     checkLogin();
   }, [navigate]);
 
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center ">
-      <Navbar />
-      <h1 className="sm:text-xl text-lg mb-8 text-center px-2">
+    <div className="h-screen flex flex-col items-center justify-center sm:gap-8 gap-6">
+      {/* <Navbar /> */}
+      <h1 className="sm:text-6xl text-4xl">
+        Circles
+      </h1>
+      <h1 className="sm:text-xl text-center px-2 text-gray-800">
         Sign in to connect, share, and explore communities.
       </h1>
       <button
         onClick={handleGoogleLogin}
-        className="sm:px-12 sm:py-3.5 px-9 py-2.5 bg-gray-800 text-white rounded-xl shadow-md cursor-pointer hover:bg-black"
+        className="flex items-center gap-1.5 sm:px-11 sm:py-3 px-9 py-2.5 rounded-lg shadow-xs border border-gray-300 cursor-pointer bg-gray-50 hover:bg-gray-100 text-gray-800"
       >
-        Sign in with Google
+        <span>Sign in with</span>
+        <FcGoogle />
+        <span>Google</span>
       </button>
     </div>
   )

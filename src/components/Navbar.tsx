@@ -1,8 +1,8 @@
 
 const Navbar = () => {
   return (
-    <div className=" fixed top-0 p-4">
-      <p className="text-xl">Circles</p>
+    <div className="w-full fixed top-0 left-0 px-18 py-4.5  bg-white shadow-sm border-b border-gray-300">
+      <p className="text-xl text-white">Circles</p>
     </div>
   )
 }
